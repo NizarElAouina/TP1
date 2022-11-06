@@ -13,24 +13,161 @@
         <div><h3>Introduction</h3>
         Ce quizz contient 30 questions dans Trois parties différentes. <br> Pour valider chaque partie il faut avoir 
         au moins 7 réponses correctes</div>
-        <div><h3>Partie 1 : Géographie</h3>
+        <div><h3>Partie 1 : Géographie de notre continent Africain</h3>
         </div>
         <div><form action="#">
-            <p>Quelle est la capitale du Maroc</p>
-            <input type="Radio" name="Maroc" id="Rabat" onclick="display()" >Rabat <br>
-            <input type="Radio" name="Maroc" id="Casa" onclick="display()">Casablanca <br>
-            <input type="Radio" name="Maroc" id="Fes" onclick="display()">Fès <br>
+            <p>1/ Quelle est la capitale du Maroc</p>
+            <input type="Radio" name="Maroc" id="Rabat" onclick="display1()"value ="Rabat" >Rabat <br>
+            <input type="Radio" name="Maroc" id="Casa" onclick="display1()">Casablanca <br>
+            <input type="Radio" name="Maroc" id="Fes" onclick="display1()">Fès <br>
+            <p>2/ Quelle est la capitale de l'Egypte</p>
+            <input type="Radio" name="Egypte" id="Alexandrie" onclick="display1()"> Alexandrie<br>
+            <input type="Radio" name="Egypte" id="LeCaire" onclick="display1()" >Le caire<br>
+            <input type="Radio" name="Egypte" id="Hurghada" onclick="display1()">Hurghada<br>
+            <p>3/ Quelles sont les villes africaines dans la liste suivante</p>
+            <input type="checkbox" name="Africa" id="CapeTown" onclick="display1()">Cape Town<br>
+            <input type="checkbox" name="Africa" id="Ouagadougou" onclick="display1()" >Ouagadougou<br>
+            <input type="checkbox" name="Africa" id="Antalya" onclick="display1()">Antalya<br>
+            <p>4/ L'afrique, en terme de superficie, est :</p>
+            <input type="radio" name="superficie" id="Premier" onclick="display1()">Le plus grand continent<br>
+            <input type="radio" name="superficie" id="Deuxieme" onclick="display1()" >Le deuxième plus grand continent<br>
+            <input type="radio" name="superficie" id="Dernier" onclick="display1()">Le plus petit continent<br>
+            <p>5/ Quel est le plus long fleuve en Afrique :</p>
+            <input type="radio" name="FleuveAfrique" id="Nil" onclick="display1()">Le Nil<br>
+            <input type="radio" name="FleuveAfrique" id="Congo" onclick="display1()" >Le congo<br>
+            <input type="radio" name="FleuveAfrique" id="Niger" onclick="display1()">Le niger<br>
+            <p>6/ Combien y a-t-il de pays en Afrique</p>
+            <input type="radio" name="Pays" id="55" onclick="display1()">55<br>
+            <input type="radio" name="Pays" id="56" onclick="display1()" >56<br>
+            <input type="radio" name="Pays" id="54" onclick="display1()">54<br>
+            <p>7/ Parmi les pays suivants, par lesquels passe le Nil ou une de ses sources</p>
+            <input type="checkbox" name="fleuve" id="Ethiopie" onclick="display1()">Ethiopie<br>
+            <input type="checkbox" name="fleuve" id="Egypte" onclick="display1()">Egypte<br>
+            <input type="checkbox" name="fleuve" id="Lybie" onclick="display1()">Lybie<br>
+            <p>8/ Quel est le climat dans la république démocratique du congo</p>
+            <input type="radio" name="Climat" id="Equatorial" onclick="display1()">Equatorial et tropical<br>
+            <input type="radio" name="Climat" id="Océanique" onclick="display1()" >Oéanique<br>
+            <input type="radio" name="Climat" id="Med" onclick="display1()">Méditéranéen<br>
+            <p>9/ L'Afrique est le continent qui souffre le plus du réchauffement climatique</p>
+            <input type="radio" name="VraiFaux" id="Faux" onclick="display1()">Faux<br>
+            <input type="radio" name="VraiFaux" id="Vrai" onclick="display1()" >Vrai<br>
+            <p>10/ Quel est le mont culminant d'Afrique</p>
+            <input type="radio" name="Mont" id="TT" onclick="display1()">Toubkal<br>
+            <input type="radio" name="Mont" id="KK" onclick="display1()" >Kilimindjaro<br>
+            <input type="radio" name="Mont" id="Kenya" onclick="display1()">Mont Kenya<br> <br>
         </div>
-        <div><form action="#">
-            <p>Choisissez 2 capitales africaine, la troisème ne l'est pas</p>
-            <input type="checkbox" name="Afrique" id="Manama" onclick="display()">Manama <br>
-            <input type="checkbox" name="Afrique" id="Ouagadougou" onclick="display()">Ouagadougou <br>
-            <input type="checkbox" name="Afrique" id="CapeTown" onclick="display()">Cape Town<br>
-        </div>
-            <button class="btn" type="submit"  onclick = "totale()" id ="bouton">Envoyer</button> <BR></BR>
-        </form></div>
-        <div class = "demo" style="color:green; font-size:18px; font-weight:bold;"> Le total est :</div>
+         <!-- "-->
+        <button class="btn" type="submit" onclick="event.preventDefault(); return Resultat();" id ="bouton">Envoyer</button> <BR></BR>
+       <div id="demo" style="color:green; font-size:18px; font-weight:bold;"></div> 
+   </section>
+
+   <h4>Le total est :<span id="demo"> </span> </h4>
+   <!--
+      <script>
+       function addNumbers() {
+       var v1 = Number(document.getElementById("x1").value);
+       var v2 = Number(document.getElementById("x2").value);
+       var v3 = Number(document.getElementById("x3").value);
+       var v4 = Number(document.getElementById("x4").value);
+       var total = 80*v1 + 75*v2 + 100*v3 + 120*v4;
+       document.getElementById("demo").innerHTML = total;
+   }
+   </script>-->
+   <script>
+       function display1(){
+        var tot = 0;
+           if(document.getElementById('Rabat').checked) {
+                tot +=1;
+               //document.getElementById("demo").innerHTML = "Le résultat est :" + tot;
+           }
+           if(document.getElementById('LeCaire').checked) {
+                tot +=1;
+               //document.getElementById("demo").innerHTML = "Le résultat est :" + tot;
+           }
+           if(document.getElementById('CapeTown').checked) {
+            if(document.getElementById('Ouagadougou').checked){
+                tot +=1;
+                //document.getElementById("demo").innerHTML = "Le résultat est :" + tot;
+            }
+           }
+           if(document.getElementById('Deuxieme').checked) {
+                tot +=1;
+               //document.getElementById("demo").innerHTML = "Le résultat est :" + tot;
+           }
+           if(document.getElementById('Nil').checked) {
+                tot +=1;
+               //document.getElementById("demo").innerHTML = "Le résultat est :" + tot;
+           }
+           if(document.getElementById('54').checked) {
+                tot +=1;
+               //document.getElementById("demo").innerHTML = "Le résultat est :" + tot;
+           }
+           if(document.getElementById('Egypte').checked) {
+            if(document.getElementById('Ethiopie').checked){
+                tot +=1;
+                //document.getElementById("demo").innerHTML = "Le résultat est :" + tot;
+            }
+            }
+            if(document.getElementById('Equatorial').checked) {
+                tot +=1;
+               //document.getElementById("demo").innerHTML = "Le résultat est :" + tot;
+           }
+           if(document.getElementById('Vrai').checked) {
+                tot +=1;
+               //document.getElementById("demo").innerHTML = "Le résultat est :" + tot;
+           }
+           if(document.getElementById('KK').checked) {
+                tot +=1;
+               //document.getElementById("demo").innerHTML = "Le résultat est :" + tot;
+           }
+           if (tot<3){
+            document.getElementById("bouton").disabled = true;
+            }else{
+                document.getElementById("bouton").disabled = false;
+            }
+       }
+       function Resultat(){
+        var resultat = 0;
+           if(document.getElementById('Rabat').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('LeCaire').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('CapeTown').checked) {
+            if(document.getElementById('Ouagadougou').checked){
+                resultat +=1;
+            }
+           }
+           if(document.getElementById('Deuxieme').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('Nil').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('54').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('Egypte').checked) {
+            if(document.getElementById('Ethiopie').checked){
+                resultat +=1;
+            }
+            }
+            if(document.getElementById('Equatorial').checked) {
+                resultat +=1;
+           }
+           if(document.getElementById('Vrai').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('KK').checked) {
+            resultat +=1;
+           }
+        var submit = document.getElementById("bouton");
+        submit.onclick = document.getElementById("demo").innerHTML = "Le résultat est : Réussi avec " + resultat +"/10" ;
+       }
+   </script>
     </section>
+    <!--
     <script>
         function display(){
             var total = 0;
@@ -45,5 +182,5 @@
         function totale(){
            
         }
-    </script>
+    </script>-->
 </body>
