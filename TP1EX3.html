@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP1</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <section class = "section1" >
+        <div class ="titre"><h1>Quizz</h1></div>
+        <div><h3>Introduction</h3>
+        Ce quizz contient 30 questions dans Trois parties différentes. <br> Pour valider chaque partie il faut avoir 
+        au moins 7 réponses correctes</div>
+        <div><h3>Partie 1 : Géographie</h3>
+        </div>
+        <div><form action="#">
+            <p>Quelle est la capitale du Maroc</p>
+            <input type="Radio" name="Maroc" id="Rabat" onclick="display()" >Rabat <br>
+            <input type="Radio" name="Maroc" id="Casa" onclick="display()">Casablanca <br>
+            <input type="Radio" name="Maroc" id="Fes" onclick="display()">Fès <br>
+        </div>
+        <div><form action="#">
+            <p>Choisissez 2 capitales africaine, la troisème ne l'est pas</p>
+            <input type="checkbox" name="Afrique" id="Manama" onclick="display()">Manama <br>
+            <input type="checkbox" name="Afrique" id="Ouagadougou" onclick="display()">Ouagadougou <br>
+            <input type="checkbox" name="Afrique" id="CapeTown" onclick="display()">Cape Town<br>
+        </div>
+            <button class="btn" type="submit"  onclick = "totale()" id ="bouton">Envoyer</button> <BR></BR>
+        </form></div>
+        <div class = "demo" style="color:green; font-size:18px; font-weight:bold;"> Le total est :</div>
+    </section>
+    <script>
+        function display(){
+            var total = 0;
+            if (document.getElementById('Rabat').checked){ tot= tot+1;}
+            if(document.getElementById('Ouagadougou').checked){
+                if(document.getElementById('CapeTown').checked){
+                    tot= tot+1;
+                }
+            }
+            document.getElementById("demo").innerHTML = "hdhfg";
+        }
+        function totale(){
+           
+        }
+    </script>
+</body>

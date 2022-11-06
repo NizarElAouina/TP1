@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/57249890d8.js" crossorigin="anonymous"></script>
+    <title>TP1</title>
+    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@576&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="images/white icon.png" type="images/png/">
+</head>
+<body>
+    <h1>Vente de Pizza</h1>
+        Nom du client<input type="text" name="nom" id = "nomClient" required/> <br> <BR></BR>
+        adresse<input type="text" name="adresse" id = "adresseClient" required /><br>
+        <h1>Produits à acheter</h1>
+    <section class="section1">
+        <h3>Produits à acheter :</h3>
+
+        <table>
+
+            <thead>
+                <tr class="" border = "1">
+                    <th>Nom du produit </th>
+                    <th>Prix Unitaire en DH </th>
+                    <th>Quantité</th>
+                </tr>
+            </thead>
+
+            <tbody>
+        <tr>
+                    <td>Pizza 4 fromages</td>
+                    <td>80</td>
+                    <td> <input type="number" id="x1"> </td>
+                </tr>
+                <tr>
+                    <td>Pizza Herbo</td>
+                    <td>75</td>
+                    <td> <input type="number" id="x2"> </td>
+                </tr>
+                <tr>
+                    <td>Pizza Viande hâchée</td>
+                    <td>100</td>
+                    <td> <input type="number" id="x3"> </td>
+                </tr>
+                <tr>
+                    <td>Pizza fruits de mer</td>
+                    <td>120</td>
+                    <td> <input type="number" id="x4"> </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 style="font-weight: bold;">Paiement par : </h4>
+        <input type="radio" name="banque" id="RadioCB" onclick="display()" value="Carte bancaire">Carte bancaire
+         <input type="radio" name="banque" id="RadioCK" onclick="display()" value="Chèque">Chèque <BR></BR>
+            Numéro de la carte bancaire<input type="text" name="numCB" id = "x5" style="width: 400px;" required/> <br><BR>
+        <button class="btn" type="submit"  onclick = "addNumbers()" id ="bouton">Envoyer</button> <BR></BR>
+        <div id="disp" style="color:green; font-size:18px; font-weight:bold;"></div> 
+    </section>
+
+    <h4>Le total est :<span id="demo"> </span> </h4>
+       <script>
+        function addNumbers() {
+        var v1 = Number(document.getElementById("x1").value);
+        var v2 = Number(document.getElementById("x2").value);
+        var v3 = Number(document.getElementById("x3").value);
+        var v4 = Number(document.getElementById("x4").value);
+        var total = 80*v1 + 75*v2 + 100*v3 + 120*v4;
+        document.getElementById("demo").innerHTML = total;
+    }
+    </script>
+    <script>
+        function display(){
+            if(document.getElementById('RadioCK').checked) {
+                /*document.getElementById("disp").innerHTML
+                    = document.getElementById("RadioCK").value
+                    + " radio button checked";*/
+                document.getElementById("x5").disabled = true;
+            }
+            else {
+                /*document.getElementById("disp").innerHTML
+                    = document.getElementById("RadioCB").value + " radio button checked";*/
+                    document.getElementById("x5").disabled = false;
+                    document.getElementById("demo").innerHTML = "Hello World";
+            }
+        }
+    </script>
+    
+        
+</body>
