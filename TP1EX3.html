@@ -36,29 +36,40 @@
             <input type="radio" name="superficie" id="Deuxieme" onclick="display1()" >Le deuxième plus grand continent<br>
             <input type="radio" name="superficie" id="Dernier" onclick="display1()">Le plus petit continent<br>
             <div id="Q4" style="color:green; font-size:18px; font-weight:bold;"></div> 
-            <p>5/ Quel est le plus long fleuve en Afrique :</p>
+            <p>5/ Quel est le plus long fleuve en Afrique :</p><button class="btn" type="submit" onclick="event.preventDefault(); return Answer5();" id ="Rep5">See the answer ?</button> <br>
             <input type="radio" name="FleuveAfrique" id="Nil" onclick="display1()">Le Nil<br>
             <input type="radio" name="FleuveAfrique" id="Congo" onclick="display1()" >Le congo<br>
             <input type="radio" name="FleuveAfrique" id="Niger" onclick="display1()">Le niger<br>
+            <div id="Q5" style="color:green; font-size:18px; font-weight:bold;"></div>
             <p>6/ Combien y a-t-il de pays en Afrique</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer6();" id ="Rep6">See the answer ?</button> <br>
             <input type="radio" name="Pays" id="55" onclick="display1()">55<br>
             <input type="radio" name="Pays" id="56" onclick="display1()" >56<br>
             <input type="radio" name="Pays" id="54" onclick="display1()">54<br>
+            <div id="Q6" style="color:green; font-size:18px; font-weight:bold;"></div>
             <p>7/ Parmi les pays suivants, par lesquels passe le Nil ou une de ses sources</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer7();" id ="Rep7">See the answer ?</button> <br>
             <input type="checkbox" name="fleuve" id="Ethiopie" onclick="display1()">Ethiopie<br>
             <input type="checkbox" name="fleuve" id="Egypte" onclick="display1()">Egypte<br>
             <input type="checkbox" name="fleuve" id="Lybie" onclick="display1()">Lybie<br>
+            <div id="Q7" style="color:green; font-size:18px; font-weight:bold;"></div>
             <p>8/ Quel est le climat dans la république démocratique du congo</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer8();" id ="Rep8">See the answer ?</button> <br>
             <input type="radio" name="Climat" id="Equatorial" onclick="display1()">Equatorial et tropical<br>
             <input type="radio" name="Climat" id="Océanique" onclick="display1()" >Oéanique<br>
             <input type="radio" name="Climat" id="Med" onclick="display1()">Méditéranéen<br>
+            <div id="Q8" style="color:green; font-size:18px; font-weight:bold;"></div>
             <p>9/ L'Afrique est le continent qui souffre le plus du réchauffement climatique</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer9();" id ="Rep9">See the answer ?</button> <br>
             <input type="radio" name="VraiFaux" id="Faux" onclick="display1()">Faux<br>
             <input type="radio" name="VraiFaux" id="Vrai" onclick="display1()" >Vrai<br>
+            <div id="Q9" style="color:green; font-size:18px; font-weight:bold;"></div>
             <p>10/ Quel est le mont culminant d'Afrique</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer10();" id ="Rep10">See the answer ?</button> <br>
             <input type="radio" name="Mont" id="TT" onclick="display1()">Toubkal<br>
             <input type="radio" name="Mont" id="KK" onclick="display1()" >Kilimindjaro<br>
             <input type="radio" name="Mont" id="Kenya" onclick="display1()">Mont Kenya<br> <br>
+            <div id="Q10" style="color:green; font-size:18px; font-weight:bold;"></div>
         </div>
          <!-- "-->
         <button class="btn" type="submit" onclick="event.preventDefault(); return Resultat();" id ="bouton">Envoyer</button> <BR></BR>
@@ -146,6 +157,7 @@
            }
         var submit = document.getElementById("bouton");
         submit.onclick = document.getElementById("demo").innerHTML = "Le résultat est : Réussi avec " + resultat +"/10" ;
+        submit.onclick = alert("Reussi avec "+ resultat+ "/10");
        }
        function Answer1(){
         var Rep1 = document.getElementById("Rep1");
@@ -163,7 +175,34 @@
             var Rep3 = document.getElementById("Rep4");
             Rep4.onclick = document.getElementById("Q4").innerHTML = "La réponse est : Le deuxième plus grand continent";
         }
-        
+        function Answer5(){
+            var Rep5 = document.getElementById("Rep5");
+            Rep5.onclick = document.getElementById("Q5").innerHTML = "La réponse est : Le Nil";
+        }
+        function Answer6(){
+            var Rep6 = document.getElementById("Rep6");
+            Rep6.onclick = document.getElementById("Q6").innerHTML = "La réponse est : 54";
+        }
+        function Answer6(){
+            var Rep6 = document.getElementById("Rep6");
+            Rep6.onclick = document.getElementById("Q6").innerHTML = "La réponse est : 54";
+        }
+        function Answer7(){
+            var Rep7 = document.getElementById("Rep7");
+            Rep7.onclick = document.getElementById("Q7").innerHTML = "La réponse est : Ethiopie et Egypte";
+        }
+        function Answer8(){
+            var Rep8 = document.getElementById("Rep8");
+            Rep8.onclick = document.getElementById("Q8").innerHTML = "La réponse est : Equatorial et Tropical";
+        }
+        function Answer9(){
+            var Rep9 = document.getElementById("Rep9");
+            Rep9.onclick = document.getElementById("Q9").innerHTML = "La réponse est : Vrai";
+        }
+        function Answer10(){
+            var Rep10 = document.getElementById("Rep10");
+            Rep10.onclick = document.getElementById("Q10").innerHTML = "La réponse est : Kilimindjaro";
+        }
        
    </script>
     </section>
