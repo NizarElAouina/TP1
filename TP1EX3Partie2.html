@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP1</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body class="corps">
+    <section class = "section1" >
+        <div class ="titre"><h1>Quizz 1</h1></div>
+        <div><h3>Introduction</h3>
+        Ce quizz contient 30 questions dans Trois parties différentes. <br> Pour valider chaque partie il faut avoir 
+        au moins 7 réponses correctes</div>
+        <div><h3>Partie B : Hisoire et culture</h3>
+        </div>
+        <div><form action="#">
+            <p>1/ Quand fut découvert le continent américain</p> <button class="btn" type="submit" onclick="event.preventDefault(); return Answer1();" id ="Rep1">See the answer ?</button> <br>
+            <input type="Radio" name="Maroc" id="Rabat" onclick="display1()"value ="Rabat" >1492 <br>
+            <input type="Radio" name="Maroc" id="Casa" onclick="display1()">1493 <br>
+            <input type="Radio" name="Maroc" id="Fes" onclick="display1()">1491<br>
+            <div id="Q1" style="color:green; font-size:18px; font-weight:bold;"></div> 
+            <p>2/ En quelle année a eu lieu le débarquement de la Normandie</p> <button class="btn" type="submit" onclick="event.preventDefault(); return Answer2();" id ="Rep2">See the answer ?</button> <br>
+            <input type="Radio" name="Egypte" id="Alexandrie" onclick="display1()"> 1945<br>
+            <input type="Radio" name="Egypte" id="LeCaire" onclick="display1()" >1944<br>
+            <input type="Radio" name="Egypte" id="Hurghada" onclick="display1()">1943<br>
+            <div id="Q2" style="color:green; font-size:18px; font-weight:bold;"></div> 
+            <p>3/ Quelles sont les langues officielles du Maroc</p> <button class="btn" type="submit" onclick="event.preventDefault(); return Answer3();" id ="Rep3">See the answer ?</button> <br>
+            <input type="checkbox" name="Africa" id="CapeTown" onclick="display1()">Arabe<br>
+            <input type="checkbox" name="Africa" id="Ouagadougou" onclick="display1()" >Tamazight<br>
+            <input type="checkbox" name="Africa" id="Antalya" onclick="display1()">Français<br>
+            <div id="Q3" style="color:green; font-size:18px; font-weight:bold;"></div> 
+            <p>4/ En quelles année fut la chute de l'URSS:</p><button class="btn" type="submit" onclick="event.preventDefault(); return Answer4();" id ="Rep4">See the answer ?</button> <br>
+            <input type="radio" name="superficie" id="Premier" onclick="display1()">1992<br>
+            <input type="radio" name="superficie" id="Deuxieme" onclick="display1()" >1991<br>
+            <input type="radio" name="superficie" id="Dernier" onclick="display1()">1990<br>
+            <div id="Q4" style="color:green; font-size:18px; font-weight:bold;"></div> 
+            <p>5/ En quelle année fut organisée la marche verte</p><button class="btn" type="submit" onclick="event.preventDefault(); return Answer5();" id ="Rep5">See the answer ?</button> <br>
+            <input type="radio" name="FleuveAfrique" id="Nil" onclick="display1()">1975<br>
+            <input type="radio" name="FleuveAfrique" id="Congo" onclick="display1()" >1974<br>
+            <input type="radio" name="FleuveAfrique" id="Niger" onclick="display1()">1976<br>
+            <div id="Q5" style="color:green; font-size:18px; font-weight:bold;"></div>
+            <p>6/ En quelle année fut libéré Nelson Mandela</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer6();" id ="Rep6">See the answer ?</button> <br>
+            <input type="radio" name="Pays" id="55" onclick="display1()">1989<br>
+            <input type="radio" name="Pays" id="56" onclick="display1()" >1991<br>
+            <input type="radio" name="Pays" id="54" onclick="display1()">1990<br>
+            <div id="Q6" style="color:green; font-size:18px; font-weight:bold;"></div>
+            <p>7/Quelles puissances coloniales ont exercé un protectorat sur le Maroc</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer7();" id ="Rep7">See the answer ?</button> <br>
+            <input type="checkbox" name="fleuve" id="Ethiopie" onclick="display1()">La France<br>
+            <input type="checkbox" name="fleuve" id="Egypte" onclick="display1()">L'Espagne<br>
+            <input type="checkbox" name="fleuve" id="Lybie" onclick="display1()">L'Italie<br>
+            <div id="Q7" style="color:green; font-size:18px; font-weight:bold;"></div>
+            <p>8/ Qui est l'emblème du mouvement Black Lives Matter</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer8();" id ="Rep8">See the answer ?</button> <br>
+            <input type="radio" name="Climat" id="Equatorial" onclick="display1()">George Floyd<br>
+            <input type="radio" name="Climat" id="Océanique" onclick="display1()" >Martin Luther King<br>
+            <input type="radio" name="Climat" id="Med" onclick="display1()">Rosa Parks<br>
+            <div id="Q8" style="color:green; font-size:18px; font-weight:bold;"></div>
+            <p>9/ Le Sahara est marocain ?</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer9();" id ="Rep9">See the answer ?</button> <br>
+            <input type="radio" name="VraiFaux" id="Faux" onclick="display1()">Faux<br>
+            <input type="radio" name="VraiFaux" id="Vrai" onclick="display1()" >Vrai<br>
+            <div id="Q9" style="color:green; font-size:18px; font-weight:bold;"></div>
+            <p>10/ Parmi les musiciens suivants, lequel fait partie du groupe de Rock alternatif/Indie arabe Mashrou'leila  </p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer10();" id ="Rep10">See the answer ?</button> <br>
+            <input type="radio" name="Mont" id="TT" onclick="display1()">Tamer Hashem<br>
+            <input type="radio" name="Mont" id="KK" onclick="display1()" >Carles Gerges<br>
+            <input type="radio" name="Mont" id="Kenya" onclick="display1()">Mahmoud Radaideh<br> <br>
+            <div id="Q10" style="color:green; font-size:18px; font-weight:bold;"></div> 
+        </div>
+         <!-- "-->
+        <button class="btn" type="submit" onclick="event.preventDefault(); return Resultat();" id ="bouton">Envoyer</button> <BR></BR>
+       <div id="demo" style="color:green; font-size:18px; font-weight:bold;"></div> 
+   </section>
+
+   <h4>Le total est :<span id="demo"> </span> </h4>
+   <script>
+       function display1(){
+        var tot = 0;
+           if(document.getElementById('Rabat').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('LeCaire').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('CapeTown').checked) {
+            if(document.getElementById('Ouagadougou').checked){
+                tot +=1;}
+           }
+           if(document.getElementById('Deuxieme').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('Nil').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('54').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('Egypte').checked) {
+            if(document.getElementById('Ethiopie').checked){
+                tot +=1;
+            }
+            }
+            if(document.getElementById('Equatorial').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('Vrai').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('KK').checked) {
+                tot +=1;
+           }
+           
+           if (tot<7){
+            document.getElementById("bouton").disabled = true;
+            }else{
+                document.getElementById("bouton").disabled = false;
+            }
+            
+       }
+       function Resultat(){
+        var resultat = 0;
+           if(document.getElementById('Rabat').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('LeCaire').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('CapeTown').checked) {
+            if(document.getElementById('Ouagadougou').checked){
+                resultat +=1;
+            }
+           }
+           if(document.getElementById('Deuxieme').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('Nil').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('54').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('Egypte').checked) {
+            if(document.getElementById('Ethiopie').checked){
+                resultat +=1;
+            }
+            }
+            if(document.getElementById('Equatorial').checked) {
+                resultat +=1;
+           }
+           if(document.getElementById('Vrai').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('KK').checked) {
+            resultat +=1;
+           }
+        
+        var submit = document.getElementById("bouton");
+        submit.onclick = document.getElementById("demo").innerHTML = "Le résultat est : Réussi avec " + resultat +"/10" ;
+        submit.onclick = alert("Reussi avec "+ resultat+ "/10");
+       }
+       function Answer1(){
+        var Rep1 = document.getElementById("Rep1");
+        Rep1.onclick = document.getElementById("Q1").innerHTML = "La réponse est : 1492";
+        }
+        function Answer2(){
+            var Rep2 = document.getElementById("Rep2");
+            Rep2.onclick = document.getElementById("Q2").innerHTML = "La réponse est : 1944";
+        }
+        function Answer3(){
+            var Rep3 = document.getElementById("Rep3");
+            Rep3.onclick = document.getElementById("Q3").innerHTML = "La réponse est : Arabe et Tamazight";
+        }
+        function Answer4(){
+            var Rep3 = document.getElementById("Rep4");
+            Rep4.onclick = document.getElementById("Q4").innerHTML = "La réponse est : 1991";
+        }
+        function Answer5(){
+            var Rep5 = document.getElementById("Rep5");
+            Rep5.onclick = document.getElementById("Q5").innerHTML = "La réponse est : 1975";
+        }
+        function Answer6(){
+            var Rep6 = document.getElementById("Rep6");
+            Rep6.onclick = document.getElementById("Q6").innerHTML = "La réponse est : 1990";
+        }
+        function Answer6(){
+            var Rep6 = document.getElementById("Rep6");
+            Rep6.onclick = document.getElementById("Q6").innerHTML = "La réponse est : 54";
+        }
+        function Answer7(){
+            var Rep7 = document.getElementById("Rep7");
+            Rep7.onclick = document.getElementById("Q7").innerHTML = "La réponse est : Ethiopie et Egypte";
+        }
+        function Answer8(){
+            var Rep8 = document.getElementById("Rep8");
+            Rep8.onclick = document.getElementById("Q8").innerHTML = "La réponse est : George Floyd";
+        }
+        function Answer9(){
+            var Rep9 = document.getElementById("Rep9");
+            Rep9.onclick = document.getElementById("Q9").innerHTML = "La réponse est : Vrai";
+        }
+        function Answer10(){
+            var Rep10 = document.getElementById("Rep10");
+            Rep10.onclick = document.getElementById("Q10").innerHTML = "La réponse est : Carl Gerges";
+        }
+
+       
+   </script>
+    </section>
+</body>

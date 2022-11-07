@@ -1,7 +1,7 @@
 .section1{
     background-color: #CCFFFF;
     position: absolute;
-    top: :0px;
+    top: 0px;
     width : 100%;
     
 }
@@ -13,4 +13,18 @@
 }
 .section1 p{
     font-weight: bold;
+}
+.PA{
+    font-size: 50px;
+    margin-left: 100px;
+}
+.Bienvenue{
+    font-size: 70px;
+}
+.corps{
+    background-color: #CCFFFF;
+}
+.comment{
+    font-weight: bold;
+    font-size: 25px;
 }

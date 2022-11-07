@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP1</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body class="corps">
+    <section class = "section1" >
+        <div class ="titre"><h1>Quizz 1</h1></div>
+        <div><h3>Introduction</h3>
+        Ce quizz contient 30 questions dans Trois parties différentes. <br> Pour valider chaque partie il faut avoir 
+        au moins 7 réponses correctes</div>
+        <div><h3>Partie A : Géographie de notre continent Africain</h3>
+        </div>
+        <div><form action="#">
+            <p>1/ Quelle est la capitale du Maroc</p> <button class="btn" type="submit" onclick="event.preventDefault(); return Answer1();" id ="Rep1">See the answer ?</button> <br>
+            <input type="Radio" name="Maroc" id="Rabat" onclick="display1()"value ="Rabat" >Rabat <br>
+            <input type="Radio" name="Maroc" id="Casa" onclick="display1()">Casablanca <br>
+            <input type="Radio" name="Maroc" id="Fes" onclick="display1()">Fès <br>
+            <div id="Q1" style="color:green; font-size:18px; font-weight:bold;"></div> 
+            <p>2/ Quelle est la capitale de l'Egypte</p> <button class="btn" type="submit" onclick="event.preventDefault(); return Answer2();" id ="Rep2">See the answer ?</button> <br>
+            <input type="Radio" name="Egypte" id="Alexandrie" onclick="display1()"> Alexandrie<br>
+            <input type="Radio" name="Egypte" id="LeCaire" onclick="display1()" >Le caire<br>
+            <input type="Radio" name="Egypte" id="Hurghada" onclick="display1()">Hurghada<br>
+            <div id="Q2" style="color:green; font-size:18px; font-weight:bold;"></div> 
+            <p>3/ Quelles sont les villes africaines dans la liste suivante</p> <button class="btn" type="submit" onclick="event.preventDefault(); return Answer3();" id ="Rep3">See the answer ?</button> <br>
+            <input type="checkbox" name="Africa" id="CapeTown" onclick="display1()">Cape Town<br>
+            <input type="checkbox" name="Africa" id="Ouagadougou" onclick="display1()" >Ouagadougou<br>
+            <input type="checkbox" name="Africa" id="Antalya" onclick="display1()">Antalya<br>
+            <div id="Q3" style="color:green; font-size:18px; font-weight:bold;"></div> 
+            <p>4/ L'afrique, en terme de superficie, est :</p><button class="btn" type="submit" onclick="event.preventDefault(); return Answer4();" id ="Rep4">See the answer ?</button> <br>
+            <input type="radio" name="superficie" id="Premier" onclick="display1()">Le plus grand continent<br>
+            <input type="radio" name="superficie" id="Deuxieme" onclick="display1()" >Le deuxième plus grand continent<br>
+            <input type="radio" name="superficie" id="Dernier" onclick="display1()">Le plus petit continent<br>
+            <div id="Q4" style="color:green; font-size:18px; font-weight:bold;"></div> 
+            <p>5/ Quel est le plus long fleuve en Afrique :</p><button class="btn" type="submit" onclick="event.preventDefault(); return Answer5();" id ="Rep5">See the answer ?</button> <br>
+            <input type="radio" name="FleuveAfrique" id="Nil" onclick="display1()">Le Nil<br>
+            <input type="radio" name="FleuveAfrique" id="Congo" onclick="display1()" >Le congo<br>
+            <input type="radio" name="FleuveAfrique" id="Niger" onclick="display1()">Le niger<br>
+            <div id="Q5" style="color:green; font-size:18px; font-weight:bold;"></div>
+            <p>6/ Combien y a-t-il de pays en Afrique</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer6();" id ="Rep6">See the answer ?</button> <br>
+            <input type="radio" name="Pays" id="55" onclick="display1()">55<br>
+            <input type="radio" name="Pays" id="56" onclick="display1()" >56<br>
+            <input type="radio" name="Pays" id="54" onclick="display1()">54<br>
+            <div id="Q6" style="color:green; font-size:18px; font-weight:bold;"></div>
+            <p>7/ Parmi les pays suivants, par lesquels passe le Nil ou une de ses sources</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer7();" id ="Rep7">See the answer ?</button> <br>
+            <input type="checkbox" name="fleuve" id="Ethiopie" onclick="display1()">Ethiopie<br>
+            <input type="checkbox" name="fleuve" id="Egypte" onclick="display1()">Egypte<br>
+            <input type="checkbox" name="fleuve" id="Lybie" onclick="display1()">Lybie<br>
+            <div id="Q7" style="color:green; font-size:18px; font-weight:bold;"></div>
+            <p>8/ Quel est le climat dans la république démocratique du congo</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer8();" id ="Rep8">See the answer ?</button> <br>
+            <input type="radio" name="Climat" id="Equatorial" onclick="display1()">Equatorial et tropical<br>
+            <input type="radio" name="Climat" id="Océanique" onclick="display1()" >Oéanique<br>
+            <input type="radio" name="Climat" id="Med" onclick="display1()">Méditéranéen<br>
+            <div id="Q8" style="color:green; font-size:18px; font-weight:bold;"></div>
+            <p>9/ L'Afrique est le continent qui souffre le plus du réchauffement climatique</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer9();" id ="Rep9">See the answer ?</button> <br>
+            <input type="radio" name="VraiFaux" id="Faux" onclick="display1()">Faux<br>
+            <input type="radio" name="VraiFaux" id="Vrai" onclick="display1()" >Vrai<br>
+            <div id="Q9" style="color:green; font-size:18px; font-weight:bold;"></div>
+            <p>10/ Quel est le mont culminant d'Afrique</p>
+            <button class="btn" type="submit" onclick="event.preventDefault(); return Answer10();" id ="Rep10">See the answer ?</button> <br>
+            <input type="radio" name="Mont" id="TT" onclick="display1()">Toubkal<br>
+            <input type="radio" name="Mont" id="KK" onclick="display1()" >Kilimindjaro<br>
+            <input type="radio" name="Mont" id="Kenya" onclick="display1()">Mont Kenya<br> <br>
+            <div id="Q10" style="color:green; font-size:18px; font-weight:bold;"></div> 
+        </div>
+         <!-- "-->
+        <button class="btn" type="submit" onclick="event.preventDefault(); return Resultat();" id ="bouton">Envoyer</button> <BR></BR>
+       <div id="demo" style="color:green; font-size:18px; font-weight:bold;"></div> 
+   </section>
+
+   <h4>Le total est :<span id="demo"> </span> </h4>
+   <script>
+       function display1(){
+        var tot = 0;
+           if(document.getElementById('Rabat').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('LeCaire').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('CapeTown').checked) {
+            if(document.getElementById('Ouagadougou').checked){
+                tot +=1;}
+           }
+           if(document.getElementById('Deuxieme').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('Nil').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('54').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('Egypte').checked) {
+            if(document.getElementById('Ethiopie').checked){
+                tot +=1;
+            }
+            }
+            if(document.getElementById('Equatorial').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('Vrai').checked) {
+                tot +=1;
+           }
+           if(document.getElementById('KK').checked) {
+                tot +=1;
+           }
+           
+           if (tot<7){
+            document.getElementById("bouton").disabled = true;
+            }else{
+                document.getElementById("bouton").disabled = false;
+            }
+            
+       }
+       function Resultat(){
+        var resultat = 0;
+           if(document.getElementById('Rabat').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('LeCaire').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('CapeTown').checked) {
+            if(document.getElementById('Ouagadougou').checked){
+                resultat +=1;
+            }
+           }
+           if(document.getElementById('Deuxieme').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('Nil').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('54').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('Egypte').checked) {
+            if(document.getElementById('Ethiopie').checked){
+                resultat +=1;
+            }
+            }
+            if(document.getElementById('Equatorial').checked) {
+                resultat +=1;
+           }
+           if(document.getElementById('Vrai').checked) {
+            resultat +=1;
+           }
+           if(document.getElementById('KK').checked) {
+            resultat +=1;
+           }
+        
+        var submit = document.getElementById("bouton");
+        submit.onclick = document.getElementById("demo").innerHTML = "Le résultat est : Réussi avec " + resultat +"/10" ;
+        submit.onclick = alert("Reussi avec "+ resultat+ "/10");
+       }
+       function Answer1(){
+        var Rep1 = document.getElementById("Rep1");
+        Rep1.onclick = document.getElementById("Q1").innerHTML = "La réponse est : Rabat";
+        }
+        function Answer2(){
+            var Rep2 = document.getElementById("Rep2");
+            Rep2.onclick = document.getElementById("Q2").innerHTML = "La réponse est : Le caire";
+        }
+        function Answer3(){
+            var Rep3 = document.getElementById("Rep3");
+            Rep3.onclick = document.getElementById("Q3").innerHTML = "La réponse est : Cape Town et Ouagadougou";
+        }
+        function Answer4(){
+            var Rep3 = document.getElementById("Rep4");
+            Rep4.onclick = document.getElementById("Q4").innerHTML = "La réponse est : Le deuxième plus grand continent";
+        }
+        function Answer5(){
+            var Rep5 = document.getElementById("Rep5");
+            Rep5.onclick = document.getElementById("Q5").innerHTML = "La réponse est : Le Nil";
+        }
+        function Answer6(){
+            var Rep6 = document.getElementById("Rep6");
+            Rep6.onclick = document.getElementById("Q6").innerHTML = "La réponse est : 54";
+        }
+        function Answer6(){
+            var Rep6 = document.getElementById("Rep6");
+            Rep6.onclick = document.getElementById("Q6").innerHTML = "La réponse est : 54";
+        }
+        function Answer7(){
+            var Rep7 = document.getElementById("Rep7");
+            Rep7.onclick = document.getElementById("Q7").innerHTML = "La réponse est : Ethiopie et Egypte";
+        }
+        function Answer8(){
+            var Rep8 = document.getElementById("Rep8");
+            Rep8.onclick = document.getElementById("Q8").innerHTML = "La réponse est : Equatorial et Tropical";
+        }
+        function Answer9(){
+            var Rep9 = document.getElementById("Rep9");
+            Rep9.onclick = document.getElementById("Q9").innerHTML = "La réponse est : Vrai";
+        }
+        function Answer10(){
+            var Rep10 = document.getElementById("Rep10");
+            Rep10.onclick = document.getElementById("Q10").innerHTML = "La réponse est : Kilimindjaro";
+        }
+
+       
+   </script>
+    </section>
+</body>
